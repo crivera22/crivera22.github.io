@@ -1,1 +1,32 @@
-<!DOCTYPE html><html lang=en><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><link rel=icon href=/favicon.ico><title>vue-analytics</title><link href=/css/app.11c93175.css rel=preload as=style><link href=/js/app.d2194fec.js rel=preload as=script><link href=/js/chunk-vendors.33d4e0f8.js rel=preload as=script><link href=/css/app.11c93175.css rel=stylesheet></head><body><noscript><strong>We're sorry but vue-analytics doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id=app></div><script src=/js/chunk-vendors.33d4e0f8.js></script><script src=/js/app.d2194fec.js></script></body></html>
+<!DOCTYPE html><html lang=en><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><link rel=icon href=/favicon.ico><title>page title</title><script async src="https://www.googletagmanager.com/gtag/js?id=UA-149765088-1"></script><script>window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag("js", new Date());
+
+			gtag("config", "UA-149765088-1");</script><script src=https://cdn.botframework.com/botframework-webchat/latest/webchat.js></script><style>html,
+			body {
+				height: 100%;
+			}
+			body {
+				margin: 0;
+			}
+			#webchat {
+				height: 100%;
+				width: 100%;
+				background: #f1f1f1;
+			}</style><link href=/css/app.ae816141.css rel=preload as=style><link href=/js/app.b6751f34.js rel=preload as=script><link href=/js/chunk-vendors.c08bf4f6.js rel=preload as=script><link href=/css/app.ae816141.css rel=stylesheet></head><body><noscript><strong>We're sorry but vue-analytics-test doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id=app></div><div id=webchat role=main></div><script>(async function() {
+				const res = await fetch("https://webchat-mockbot.azurewebsites.net/directline/token", {
+					method: "POST"
+				});
+				const { token } = await res.json();
+
+				window.WebChat.renderWebChat(
+					{
+						directLine: window.WebChat.createDirectLine({ "token" })
+					},
+					document.getElementById("webchat")
+				);
+
+				document.querySelector("#webchat > *").focus();
+			})().catch(err => console.error(err));</script><script src=/js/chunk-vendors.c08bf4f6.js></script><script src=/js/app.b6751f34.js></script></body></html>
